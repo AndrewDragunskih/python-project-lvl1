@@ -1,0 +1,8 @@
+name: make-lint
+on: push
+jobs:
+  checking_linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking_flake8_linter
+        run: make lint
