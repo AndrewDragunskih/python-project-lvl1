@@ -14,3 +14,8 @@ def set_the_task_even_game():
 def set_the_task_gcd_game():
     """Set the task in gcd game."""
     print('Find the greatest common divisor of given numbers.')
+
+
+def set_the_task_progression_game():
+    """Set the task in progression game."""
+    print('What number is missing in the progression?')

@@ -3,3 +3,4 @@
 [![Actions Status](https://github.com/AndrewDragunskih/python-project-lvl1/workflows/Linter%20check/badge.svg)](https://github.com/AndrewDragunskih/python-project-lvl1/actions)
 [![asciicast](https://asciinema.org/a/463687.svg)](https://asciinema.org/a/463687)
 [![asciicast](https://asciinema.org/a/465720.svg)](https://asciinema.org/a/465720)
+[![asciicast](https://asciinema.org/a/465947.svg)](https://asciinema.org/a/465947)
