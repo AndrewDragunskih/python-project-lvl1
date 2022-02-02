@@ -19,3 +19,8 @@ def set_the_task_gcd_game():
 def set_the_task_progression_game():
     """Set the task in progression game."""
     print('What number is missing in the progression?')
+
+
+def set_the_task_prime_game():
+    """Set the task in prime game."""
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')

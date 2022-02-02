@@ -21,12 +21,12 @@ def run_progression_game():
     pos_to_find = randint(1, prog_len)
     question = ''
     # generate progression and choose number to find
-    for num_pos in range(1, prog_len+1):
+    for num_pos in range(1, prog_len + 1):
         if num_pos == pos_to_find:
             question = '{0}..'.format(question)
             right_answer = str(init_num + (num_pos - 1) * diff)
         else:
-            question = '{0}{1}'.format(question,str(init_num + (num_pos - 1) * diff))
+            question += str(init_num + (num_pos - 1) * diff)
         if num_pos < prog_len:
             question = '{0} '.format(question)
     # ask user a question
