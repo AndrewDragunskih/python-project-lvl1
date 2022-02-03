@@ -1,5 +1,4 @@
 """Prime game logic."""
-from math import sqrt
 from random import randint
 
 
@@ -15,16 +14,16 @@ def run_prime_game():
     num_max = 100
     num_min = 1
     question = randint(num_min, num_max)
-    right_answer = 'yes'
     current_num = 2
     # checking number
     if question == 1:
         right_answer = 'no'
     else:
-        while current_num <= sqrt(question) and right_answer == 'yes':
-            if question % current_num == 0:
-                right_answer = 'no'
-            current_num += 1
+        right_answer = 'yes'
+    while current_num <= question // 2 and right_answer == 'yes':
+        if question % current_num == 0:
+            right_answer = 'no'
+        current_num += 1
     # ask user a question
     print('Question:', question)
     # get user answer
