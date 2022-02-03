@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Calculation game."""
+"""Calculation game script ."""
 from brain_games.games.calc_game import run_calc_game
 from brain_games.greeting_user import welcome_user
 from brain_games.results_processing import check_result

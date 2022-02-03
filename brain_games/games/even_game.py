@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Even game."""
+"""Even game logic ."""
 from random import randint
 
 

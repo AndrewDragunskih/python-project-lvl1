@@ -1,4 +1,4 @@
-"""Setting the task module."""
+"""Setting the task module ."""
 
 
 def set_the_task_calc_game():

@@ -1,4 +1,4 @@
-"""Progression game logic."""
+"""Progression game ."""
 from random import randint
 
 

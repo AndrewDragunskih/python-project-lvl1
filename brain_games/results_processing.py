@@ -1,4 +1,4 @@
-"""Checking results module."""
+"""Processing results module ."""
 
 
 def check_result(current_attmp, attmp_count, user_name, answer, right_answer):

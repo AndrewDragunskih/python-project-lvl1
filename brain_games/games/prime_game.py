@@ -1,4 +1,4 @@
-"""Prime game logic."""
+"""Prime game logic ."""
 from random import randint
 
 

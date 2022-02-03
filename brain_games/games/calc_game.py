@@ -1,4 +1,4 @@
-"""Calculation game logic."""
+"""Calculation game ."""
 from random import choice, randint
 
 

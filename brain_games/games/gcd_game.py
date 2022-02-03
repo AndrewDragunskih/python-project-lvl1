@@ -1,4 +1,4 @@
-"""Greatest common divisor game logic."""
+"""Greatest common divisor game ."""
 from math import gcd
 from random import randint
 

@@ -1,4 +1,4 @@
-"""greeting module."""
+"""Greeting module ."""
 import prompt
 
 

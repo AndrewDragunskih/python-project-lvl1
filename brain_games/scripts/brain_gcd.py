@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Even game."""
+"""Even game script ."""
 from brain_games.games.gcd_game import run_gcd_game
 from brain_games.greeting_user import welcome_user
 from brain_games.results_processing import check_result

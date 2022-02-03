@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Prime game."""
+"""Prime game script ."""
 from brain_games.games.prime_game import run_prime_game
 from brain_games.greeting_user import welcome_user
 from brain_games.results_processing import check_result

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Progression game game."""
+"""Progression game script ."""
 from brain_games.games.progression_game import run_progression_game
 from brain_games.greeting_user import welcome_user
 from brain_games.results_processing import check_result
