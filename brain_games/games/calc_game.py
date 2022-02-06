@@ -18,7 +18,7 @@ def run_calc_game():
     num1 = randint(range_start, range_end)
     num2 = randint(range_start, range_end)
     operator = choice(ops)
-    question = str(num1) + operator + str(num2)
+    question = '{0} {1} {2}'.format(str(num1), operator, str(num2))
     # ask user a question
     print('Question:', question)
     # get user answer
