@@ -8,4 +8,4 @@ def set_the_attepts_number():
     Returns:
         int: number of attempts
     """
-    return 4
+    return 3
