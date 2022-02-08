@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """Prime game script ."""
 from brain_games.games.prime_game import run_prime_game
+from brain_games.games_settings import set_the_attepts_number
 from brain_games.greeting_user import welcome_user
 from brain_games.results_processing import check_result
 from brain_games.setting_the_task import set_the_task_prime_game
@@ -13,7 +14,7 @@ def main():
     # Setting the task
     set_the_task_prime_game()
     # Initialize game parameters
-    attmp_count = 3
+    attmp_count = set_the_attepts_number()
     current_attmp = 1
     answer = ''
     right_answer = ''
