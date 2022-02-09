@@ -1,26 +1,18 @@
 """Setting the task module ."""
 
 
-def set_the_task_calc_game():
-    """Set the task in calculation game."""
-    print('What is the result of the expression?')
+def set_the_task(game_name):
+    """
+    Set the task in running game.
 
-
-def set_the_task_even_game():
-    """Set the task in even game."""
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-
-
-def set_the_task_gcd_game():
-    """Set the task in gcd game."""
-    print('Find the greatest common divisor of given numbers.')
-
-
-def set_the_task_progression_game():
-    """Set the task in progression game."""
-    print('What number is missing in the progression?')
-
-
-def set_the_task_prime_game():
-    """Set the task in prime game."""
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    Args:
+        game_name (str) : Name of running game
+    """
+    functions = {
+        'calc': 'What is the result of the expression?',
+        'even': 'Answer "yes" if the number is even, otherwise answer "no".',
+        'gcd': 'Find the greatest common divisor of given numbers.',
+        'prime': 'What number is missing in the progression?',
+        'prg': 'Answer "yes" if given number is prime. Otherwise answer "no".',
+    }
+    print(functions[game_name])
