@@ -10,6 +10,8 @@ def run_progression_game():
         str: answer
         str: right_answer
     """
+    # Print game rules
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     # initialization
     prog_len_max = 10
     prog_len_min = 5

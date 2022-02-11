@@ -11,6 +11,8 @@ def run_gcd_game():
         str: answer
         str: right_answer
     """
+    # Print game rules
+    print('Find the greatest common divisor of given numbers.')
     # Ititialization
     range_start = 1
     range_end = 30

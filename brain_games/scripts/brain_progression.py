@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 """Progression game script ."""
 from brain_games.engine import run_game_logic
+from brain_games.games.progression_game import run_progression_game
 
 
 def main():
     """Find missing number in the progression."""
     # Greeting user. Getting user name
-    run_game_logic('prg')
+    run_game_logic(run_progression_game)
 
 
 if __name__ == '__main__':

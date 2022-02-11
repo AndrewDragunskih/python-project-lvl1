@@ -10,6 +10,8 @@ def run_calc_game():
         str: answer
         str: right_answer
     """
+    # Print game rules
+    print('What is the result of the expression?')
     # Ititialization
     range_start = 1
     range_end = 10

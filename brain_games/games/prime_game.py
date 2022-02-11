@@ -10,6 +10,8 @@ def run_prime_game():
         str: answer
         str: right_answer
     """
+    # Print game rules
+    print('What number is missing in the progression?')
     # initialization
     num_max = 100
     num_min = 1

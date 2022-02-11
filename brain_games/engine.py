@@ -1,41 +1,35 @@
 """Run logic in any game."""
-from brain_games.games.calc_game import run_calc_game
-from brain_games.games.even_game import run_even_game
-from brain_games.games.gcd_game import run_gcd_game
-from brain_games.games.prime_game import run_prime_game
-from brain_games.games.progression_game import run_progression_game
-from brain_games.greeting_user import welcome_user
-from brain_games.results_processing import check_result
-from brain_games.setting_the_task import set_the_task
+import prompt
 
 
-def run_game_logic(game_name):
+def run_game_logic(run_chosen_game):
     """
     Run game logic.
 
     Args:
-        game_name (str) : Name of running game
+        run_chosen_game : run chosen game
     """
     # Greeting user. Getting user name
-    usr_name = welcome_user()
-    # Setting the task
-    set_the_task(game_name)
+    print('Welcome to the Brain Games!')
+    usr_name = prompt.string('May I have your name? ')
+    print('Hello, {0}!'.format(usr_name))
     # Initialize game parameters
     attmp_count = 3
     current_attmp = 1
     answer = ''
     right_answer = ''
     # run game
-    functions = {
-        'calc': run_calc_game,
-        'even': run_even_game,
-        'gcd': run_gcd_game,
-        'prime': run_prime_game,
-        'prg': run_progression_game,
-    }
     while (current_attmp <= attmp_count) and (answer == right_answer):
         # run game. Get user answer and right answer
-        answer, right_answer = functions[game_name]()
+        answer, right_answer = run_chosen_game()
         # check if user answer is right
-        check_result(current_attmp, attmp_count, usr_name, answer, right_answer)
+        if answer == right_answer and current_attmp < attmp_count:
+            print('Correct!')
+        elif answer == right_answer and current_attmp == attmp_count:
+            print('Correct!')
+            print('Congratulations,', usr_name, sep=' ', end='!\n')
+        else:
+            print("'{0}' is wrong answer ;(.".format(answer), end=' ')
+            print("Correct answer was '{0}'.".format(right_answer))
+            print("Let's try again, {0}!".format(usr_name))
         current_attmp += 1

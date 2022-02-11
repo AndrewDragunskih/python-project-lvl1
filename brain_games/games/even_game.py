@@ -11,6 +11,9 @@ def run_even_game():
         str: answer
         str: right_answer
     """
+    # Print game rules
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    # Initialization
     range_start = 1
     range_end = 100
     # generate random number
