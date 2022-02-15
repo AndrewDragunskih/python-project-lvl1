@@ -11,20 +11,19 @@ def run_even_game():
         str: answer
         str: right_answer
     """
-    # Print game rules
-    print('Answer "yes" if the number is even, otherwise answer "no".')
     # Initialization
     range_start = 1
     range_end = 100
-    # generate random number
+    # generate question to user
     question = randint(range_start, range_end)
-    # ask user a question
-    print('Question:', question)
-    # get user answer
-    answer = input('Your answer: ')
     # generate right answer
     if question % 2 == 0:
         right_answer = 'yes'
     else:
         right_answer = 'no'
-    return answer, right_answer
+    return question, right_answer
+
+
+def set_task_even_game():
+    """Print the task in even game."""
+    print('Answer "yes" if the number is even, otherwise answer "no".')

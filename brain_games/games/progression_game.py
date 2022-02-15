@@ -10,8 +10,6 @@ def run_progression_game():
         str: answer
         str: right_answer
     """
-    # Print game rules
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     # initialization
     prog_len_max = 10
     prog_len_min = 5
@@ -31,8 +29,9 @@ def run_progression_game():
             question += str(init_num + (num_pos - 1) * diff)
         if num_pos < prog_len:
             question = '{0} '.format(question)
-    # ask user a question
-    print('Question:', question)
-    # get user answer
-    answer = input('Your answer: ')
-    return answer, right_answer
+    return question, right_answer
+
+
+def set_task_progression_game():
+    """Print the task in progression game."""
+    print('What number is missing in the progression?')

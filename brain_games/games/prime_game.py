@@ -2,6 +2,27 @@
 from random import randint
 
 
+def is_number_prime(number):
+    """
+    Check if the number is prime.
+
+    Args:
+        number (int) : the number
+
+    Returns:
+        bool: True if the number is prime, else - false
+    """
+    current_num = 2
+    answer = True
+    if number == 1:
+        answer = False
+    while current_num <= number // 2 and answer is True:
+        if number % current_num == 0:
+            answer = False
+        current_num += 1
+    return answer
+
+
 def run_prime_game():
     """
     Run prime game.
@@ -10,24 +31,19 @@ def run_prime_game():
         str: answer
         str: right_answer
     """
-    # Print game rules
-    print('What number is missing in the progression?')
     # initialization
     num_max = 100
     num_min = 1
+    # generate question to user
     question = randint(num_min, num_max)
-    current_num = 2
-    # checking number
-    if question == 1:
-        right_answer = 'no'
-    else:
+    # generate right answer
+    if is_number_prime(question) is True:
         right_answer = 'yes'
-    while current_num <= question // 2 and right_answer == 'yes':
-        if question % current_num == 0:
-            right_answer = 'no'
-        current_num += 1
-    # ask user a question
-    print('Question:', question)
-    # get user answer
-    answer = input('Your answer: ')
-    return answer, right_answer
+    else:
+        right_answer = 'no'
+    return question, right_answer
+
+
+def set_task_prime_game():
+    """Print the task in prime game."""
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
