@@ -2,6 +2,9 @@
 from math import gcd
 from random import randint
 
+RANGE_START = 1
+RANGE_END = 30
+
 
 def run_gcd_game():
     """
@@ -11,17 +14,18 @@ def run_gcd_game():
         str: answer
         str: right_answer
     """
-    # Ititialization
-    range_start = 1
-    range_end = 30
     # generate random numbers
-    num1 = randint(range_start, range_end)
-    num2 = randint(range_start, range_end)
+    num1 = randint(RANGE_START, RANGE_END)
+    num2 = randint(RANGE_START, RANGE_END)
     # generate quesion to user
     question = '{0} {1}'.format(num1, num2)
     return question, str(gcd(num1, num2))
 
 
-def set_task_gcd_game():
-    """Print the task in gcd game."""
-    print('Find the greatest common divisor of given numbers.')
+def get_task_gcd_game():
+    """Print the task in gcd game.
+
+    Returns:
+        str : gcd game task
+    """
+    return 'Find the greatest common divisor of given numbers.'

@@ -1,6 +1,9 @@
 """Prime game logic ."""
 from random import randint
 
+RANGE_START = 1
+RANGE_END = 100
+
 
 def is_number_prime(number):
     """
@@ -31,11 +34,8 @@ def run_prime_game():
         str: answer
         str: right_answer
     """
-    # initialization
-    num_max = 100
-    num_min = 1
     # generate question to user
-    question = randint(num_min, num_max)
+    question = randint(RANGE_START, RANGE_END)
     # generate right answer
     if is_number_prime(question) is True:
         right_answer = 'yes'
@@ -44,6 +44,11 @@ def run_prime_game():
     return question, right_answer
 
 
-def set_task_prime_game():
-    """Print the task in prime game."""
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+def get_task_prime_game():
+    """
+    Print the task in prime game.
+
+    Returns:
+        str : prime game task
+    """
+    return 'Answer "yes" if given number is prime. Otherwise answer "no".'

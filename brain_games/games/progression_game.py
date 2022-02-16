@@ -1,6 +1,11 @@
 """Progression game ."""
 from random import randint
 
+PROG_LEN_MIN = 10
+PROG_LEN_MAX = 10
+NUM_MIN = 1
+NUM_MAX = 25
+
 
 def run_progression_game():
     """
@@ -11,13 +16,9 @@ def run_progression_game():
         str: right_answer
     """
     # initialization
-    prog_len_max = 10
-    prog_len_min = 5
-    prog_len = randint(prog_len_min, prog_len_max)
-    num_max = 25
-    num_min = 1
-    init_num = randint(num_min, num_max)
-    diff = randint(num_min, num_max)
+    prog_len = randint(PROG_LEN_MIN, PROG_LEN_MAX)
+    init_num = randint(NUM_MIN, NUM_MAX)
+    diff = randint(NUM_MIN, NUM_MAX)
     pos_to_find = randint(1, prog_len)
     question = ''
     # generate progression and choose number to find
@@ -32,6 +33,11 @@ def run_progression_game():
     return question, right_answer
 
 
-def set_task_progression_game():
-    """Print the task in progression game."""
-    print('What number is missing in the progression?')
+def get_task_progression_game():
+    """
+    Print the task in progression game.
+
+    Returns:
+        str : progression game task
+    """
+    return 'What number is missing in the progression?'

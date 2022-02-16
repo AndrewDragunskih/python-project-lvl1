@@ -1,6 +1,10 @@
 """Calculation game ."""
 from random import choice, randint
 
+RANGE_START = 1
+RANGE_END = 15
+OPS = ('+', '-', '*')
+
 
 def run_calc_game():
     """
@@ -10,14 +14,10 @@ def run_calc_game():
         str: answer
         str: right_answer
     """
-    # Ititialization
-    range_start = 1
-    range_end = 10
-    ops = ['+', '-', '*']
     # generate question
-    num1 = randint(range_start, range_end)
-    num2 = randint(range_start, range_end)
-    operator = choice(ops)
+    num1 = randint(RANGE_START, RANGE_END)
+    num2 = randint(RANGE_START, RANGE_END)
+    operator = choice(OPS)
     question = '{0} {1} {2}'.format(str(num1), operator, str(num2))
     # calculate right answer
     if operator == '+':
@@ -29,6 +29,11 @@ def run_calc_game():
     return question, str(right_answer)
 
 
-def set_task_calc_game():
-    """Print the task in calc game."""
-    print('What is the result of the expression?')
+def get_task_calc_game():
+    """
+    Print the task in calc game.
+
+    Returns:
+        str : calc game task
+    """
+    return 'What is the result of the expression?'
