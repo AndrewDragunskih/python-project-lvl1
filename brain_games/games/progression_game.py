@@ -8,7 +8,7 @@ NUM_MAX = 25
 TASK = 'What number is missing in the progression?'
 
 
-def generate_a_and_a_progression_game():
+def generate_q_and_a_progression_game():
     """
     Run progression game.
 
